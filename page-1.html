@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>FyzzStore</title>
+
+    <style>
+        body {
+            text-align: center;
+            margin-top: 150px;
+            padding: 50px;
+            background-color:  #111827;;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-family:Arial, Helvetica, sans-serif;
+            color: #38BDF8;;
+            line-height: 1.6;
+            margin-bottom: 130px;
+        }
+
+        .button {
+            padding: 13px 200px;
+            background-color: white;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .button:hover {
+            background-color: #f9fafb;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 17px lightblue;
+}
+
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .image  img {
+            width: 30%;
+            height: 30%;
+            object-fit: cover;
+        }
+
+        .image {
+            margin-bottom: 80px;
+        }
+
+         @media (max-width: 768px) {
+            h1 {
+                text-align: left;
+                font-size: 2.3rem;
+                margin-top: -100px;
+                margin-bottom: 105px;
+            }
+
+            .button {
+                padding: 15px 130px;
+                border-radius: 50px;
+            }
+
+             .image img {
+                margin-bottom: 100px;
+                width: 104%;
+                height: 104%;
+                
+            }
+         }
+
+         /* Menargetkan HP saat dimiringkan (Lebar layar lebih besar dari tinggi) */
+@media (max-width: 932px) and (orientation: landscape) {
+    
+    h1 {
+        text-align: center;      /* Lebih rapi di tengah saat layar lebar */
+        font-size: 1.8rem;       /* Perkecil dikit supaya nggak menuhin layar miring */
+        margin-top: 20px;        /* JANGAN pakai minus, biar nggak ketutup navbar */
+        margin-bottom: 20px;     /* Jarak normal agar konten bawah kelihatan */
+    }
+
+    .button {
+        display: inline-block;
+        padding: 12px 60px;      /* Perkecil padding samping agar tombol nggak lebar banget */
+        border-radius: 50px;
+        width: auto;             /* Pastikan tombol nggak maksa lebar penuh */
+    }
+
+    .image img {
+        margin-bottom: 30px;
+        width: 60%;              /* Jangan 104%, nanti gambarnya raksasa di layar miring */
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Tambahan: Supaya container nggak kepotong */
+    #hero, .container {
+        height: auto; 
+        padding-top: 80px;       /* Kasih ruang buat fixed header kamu */
+    }
+}
+    </style>
+</head>
+<body>
+    <h1 data-aos="zoom-in">Kami hadir untuk memberikan solusi <br> yang tepat, rapi, dan terpercaya.</h1>
+    <div class="image">
+        <img src="cover.image.2.png" alt="cover.image.2">
+    </div>
+    <a href="page-2.html" target="_blank" class="button" >Lanjutkan <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
+</svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    window.addEventListener('load', function() {
+    AOS.init({
+            easing: 'ease-in-out',
+            duration: 1200,
+            offset: 200,
+            once: true
+    });
+    });
+</script>
+</body>
+</html>
